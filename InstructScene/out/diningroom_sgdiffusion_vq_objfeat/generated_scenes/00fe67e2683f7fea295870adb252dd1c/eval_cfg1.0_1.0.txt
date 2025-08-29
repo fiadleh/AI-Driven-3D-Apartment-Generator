@@ -1,0 +1,4 @@
+Graph relation acc: [   0/   1] = 0.0000
+Graph relation acc (easy): [   0/   1] = 0.0000
+Relation acc: [   0/   1] = 0.0000
+Relation acc (easy): [   0/   1] = 0.0000
