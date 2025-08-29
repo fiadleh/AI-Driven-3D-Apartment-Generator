@@ -1,0 +1,1269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>adjust : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            AI-Driven 3D Apartment Generator API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code>adjust</code> <small>module documentation</small></h1>
+
+        <span id="partOf">
+          
+          
+          
+        </span>
+      </div>
+
+      <div class="extrasDocstring">
+        
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>Author: Firas Adleh Date: 2024-09-01 Version: 1.0 Description: Adjust the furniture object in a given apartment to reduce overlaps and enhance usability</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#delete_objects_with_prefixes" class="code" data-type="Function">delete_objects_with_prefixes</a></td>
+    <td><span>Delete objects from the scene whose names start with any of the given prefixes.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#get_room_center" class="code" data-type="Function">get_room_center</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#get_room_walls" class="code" data-type="Function">get_room_walls</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#get_bounding_box" class="code" data-type="Function">get_bounding_box</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#check_collision" class="code" data-type="Function">check_collision</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#count_collisions" class="code" data-type="Function">count_collisions</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#is_object_inside_room" class="code" data-type="Function">is_object_inside_room</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#find_best_position" class="code" data-type="Function">find_best_position</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#get_bbox_min_max" class="code" data-type="Function">get_bbox_min_max</a></td>
+    <td><span>Returns the min and max coordinates of the bounding box of an object in world space.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#get_collision_center" class="code" data-type="Function">get_collision_center</a></td>
+    <td><span>Returns the center of the collision area between the bounding boxes of two given objects.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#check_collision_bbox" class="code" data-type="Function">check_collision_bbox</a></td>
+    <td><span>Check if two objects collide based on their bounding boxes.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#draw_bounding_box" class="code" data-type="Function">draw_bounding_box</a></td>
+    <td><span>Create a wireframe cube representing the bounding box of an object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#get_bbox_dimensions" class="code" data-type="Function">get_bbox_dimensions</a></td>
+    <td><span>Calculate and return the bounding box dimensions of a given object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#create_bvhtree_from_object" class="code" data-type="Function">create_bvhtree_from_object</a></td>
+    <td><span>Create a BVH tree from the given object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#check_collision_mesh" class="code" data-type="Function">check_collision_mesh</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#get_world_location" class="code" data-type="Function">get_world_location</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#convert_world_to_local" class="code" data-type="Function">convert_world_to_local</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#move_object_away2" class="code" data-type="Function">move_object_away2</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#move_object_away" class="code" data-type="Function">move_object_away</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#visualize_colliding_objects" class="code" data-type="Function">visualize_colliding_objects</a></td>
+    <td><span>Visualize bounding boxes of colliding objects with a given prefix.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#import_glb" class="code" data-type="Function">import_glb</a></td>
+    <td><span>Import a .glb file into the Blender scene at a specified 3D position and scale.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#adjust_wardrobe" class="code" data-type="Function">adjust_wardrobe</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#get_highest_point_half" class="code" data-type="Function">get_highest_point_half</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#move_object_based_on_highest_point" class="code" data-type="Function">move_object_based_on_highest_point</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#get_bounding_box_size" class="code" data-type="Function">get_bounding_box_size</a></td>
+    <td><span>Returns the size of the bounding box of an object in world coordinates.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#get_highest_z_point_world" class="code" data-type="Function">get_highest_z_point_world</a></td>
+    <td><span>Returns the highest Z-coordinate point in the object's world coordinates.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#get_longest_axis" class="code" data-type="Function">get_longest_axis</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#move_object_longest_dimension" class="code" data-type="Function">move_object_longest_dimension</a></td>
+    <td><span>Moves the object along its longest dimension (X or Y) based on the highest Z point in world coordinates.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#move_object_in_world" class="code" data-type="Function">move_object_in_world</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#will_move_closer" class="code" data-type="Function">will_move_closer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#adjust_bed" class="code" data-type="Function">adjust_bed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#resolve_collisions" class="code" data-type="Function">resolve_collisions</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#resolve_room_collisions_recrusive" class="code" data-type="Function">resolve_room_collisions_recrusive</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#check_for_near_parent_or_children" class="code" data-type="Function">check_for_near_parent_or_children</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#ensure_object_inside_room" class="code" data-type="Function">ensure_object_inside_room</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#apply_hierarchie" class="code" data-type="Function">apply_hierarchie</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#adjust_apprtment" class="code" data-type="Function">adjust_apprtment</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#render_topdown_image" class="code" data-type="Function">render_topdown_image</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#disable_shadows_for_all_lights" class="code" data-type="Function">disable_shadows_for_all_lights</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#calculate_overlap_percentage" class="code" data-type="Function">calculate_overlap_percentage</a></td>
+    <td><span>Calculate the percentage of overlapping meshes between two Blender objects.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#calculate_mesh_volume" class="code" data-type="Function">calculate_mesh_volume</a></td>
+    <td><span>Calculate the volume of a given mesh object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="adjust.html#reset_scene" class="code" data-type="Function">reset_scene</a></td>
+    <td><span>Resets the scene to a clean state.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="adjust.html#start_i" class="code" data-type="Variable">start_i</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="adjust.html#parser" class="code" data-type="Variable">parser</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="adjust.html#argv" class="code" data-type="Variable">argv</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="adjust.html#args" class="code" data-type="Variable">args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="adjust.html#filepath" class="code" data-type="Variable">filepath</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="adjust.html#logfile" class="code" data-type="Variable">logfile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="adjust.html#old" class="code" data-type="Variable">old</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="adjust.html#fd" class="code" data-type="Variable">fd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="adjust.html#end_i" class="code" data-type="Variable">end_i</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="adjust.delete_objects_with_prefixes">
+    
+  </a>
+  <a name="delete_objects_with_prefixes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    delete_objects_with_prefixes(prefixes):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Delete objects from the scene whose names start with any of the given prefixes.</p><p>Parameters: prefixes (list): A list of string prefixes to check against object names.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.get_room_center">
+    
+  </a>
+  <a name="get_room_center">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_room_center(room_id):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.get_room_walls">
+    
+  </a>
+  <a name="get_room_walls">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_room_walls(room_id):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.get_bounding_box">
+    
+  </a>
+  <a name="get_bounding_box">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_bounding_box(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.check_collision">
+    
+  </a>
+  <a name="check_collision">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_collision(obj1, obj2):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.count_collisions">
+    
+  </a>
+  <a name="count_collisions">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    count_collisions(obj, other_objects):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.is_object_inside_room">
+    
+  </a>
+  <a name="is_object_inside_room">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_object_inside_room(obj, room_id):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.find_best_position">
+    
+  </a>
+  <a name="find_best_position">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_best_position(obj, other_objects, room_id):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.get_bbox_min_max">
+    
+  </a>
+  <a name="get_bbox_min_max">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_bbox_min_max(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Returns the min and max coordinates of the bounding box of an object in world space.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.get_collision_center">
+    
+  </a>
+  <a name="get_collision_center">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_collision_center(obj1, obj2):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Returns the center of the collision area between the bounding boxes of two given objects.</p><p>Args: obj1_name (str): The name of the first object. obj2_name (str): The name of the second object.</p><p>Returns: mathutils.Vector: The center of the collision area if there is a collision, otherwise None.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.check_collision_bbox">
+    
+  </a>
+  <a name="check_collision_bbox">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_collision_bbox(obj1, obj2):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Check if two objects collide based on their bounding boxes.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.draw_bounding_box">
+    
+  </a>
+  <a name="draw_bounding_box">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    draw_bounding_box(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Create a wireframe cube representing the bounding box of an object.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.get_bbox_dimensions">
+    
+  </a>
+  <a name="get_bbox_dimensions">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_bbox_dimensions(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Calculate and return the bounding box dimensions of a given object.</p><p>:param obj: Blender object :return: Tuple with bounding box dimensions (width, height, depth) and center (center_x, center_y, center_z)</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.create_bvhtree_from_object">
+    
+  </a>
+  <a name="create_bvhtree_from_object">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_bvhtree_from_object(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Create a BVH tree from the given object.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.check_collision_mesh">
+    
+  </a>
+  <a name="check_collision_mesh">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_collision_mesh(obj1, obj2):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.get_world_location">
+    
+  </a>
+  <a name="get_world_location">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_world_location(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.convert_world_to_local">
+    
+  </a>
+  <a name="convert_world_to_local">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    convert_world_to_local(obj, vector):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.move_object_away2">
+    
+  </a>
+  <a name="move_object_away2">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    move_object_away2(object, other_object, step, only_one_axis=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.move_object_away">
+    
+  </a>
+  <a name="move_object_away">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    move_object_away(object, position, step, only_one_axis=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.visualize_colliding_objects">
+    
+  </a>
+  <a name="visualize_colliding_objects">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visualize_colliding_objects(prefix1, prefix2):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Visualize bounding boxes of colliding objects with a given prefix.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.import_glb">
+    
+  </a>
+  <a name="import_glb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    import_glb(glb_file_path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Import a .glb file into the Blender scene at a specified 3D position and scale.</p><p>:param glb_file_path: Path to the .glb file</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.adjust_wardrobe">
+    
+  </a>
+  <a name="adjust_wardrobe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    adjust_wardrobe(wardrobe_obj, all_possible_collision_objects, room_id):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.get_highest_point_half">
+    
+  </a>
+  <a name="get_highest_point_half">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_highest_point_half(obj, axis, side):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.move_object_based_on_highest_point">
+    
+  </a>
+  <a name="move_object_based_on_highest_point">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    move_object_based_on_highest_point(obj_name, move_distance=1.0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.get_bounding_box_size">
+    
+  </a>
+  <a name="get_bounding_box_size">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_bounding_box_size(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Returns the size of the bounding box of an object in world coordinates.</p><p>Args: obj (bpy.types.Object): The object to measure.</p><p>Returns: mathutils.Vector: The size of the bounding box (width, depth, height).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.get_highest_z_point_world">
+    
+  </a>
+  <a name="get_highest_z_point_world">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_highest_z_point_world(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Returns the highest Z-coordinate point in the object's world coordinates.</p><p>Args: obj (bpy.types.Object): The object to search.</p><p>Returns: mathutils.Vector: The location of the highest Z-coordinate point in world coordinates.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.get_longest_axis">
+    
+  </a>
+  <a name="get_longest_axis">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_longest_axis(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.move_object_longest_dimension">
+    
+  </a>
+  <a name="move_object_longest_dimension">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    move_object_longest_dimension(obj_name, move_distance=1.0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Moves the object along its longest dimension (X or Y) based on the highest Z point in world coordinates.</p><p>Args: obj_name (str): The name of the object to move. move_distance (float): The distance to move the object.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.move_object_in_world">
+    
+  </a>
+  <a name="move_object_in_world">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    move_object_in_world(obj_name, move_vector):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.will_move_closer">
+    
+  </a>
+  <a name="will_move_closer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    will_move_closer(obj1_name, obj2_name, direction_vector):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.adjust_bed">
+    
+  </a>
+  <a name="adjust_bed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    adjust_bed(bed_obj, other_room_objs, room_id):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.resolve_collisions">
+    
+  </a>
+  <a name="resolve_collisions">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    resolve_collisions(obj, objects, room_id, step=0.05, repeats=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.resolve_room_collisions_recrusive">
+    
+  </a>
+  <a name="resolve_room_collisions_recrusive">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    resolve_room_collisions_recrusive(objects, rooms_walls_doors, room_center, step=0.05):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.check_for_near_parent_or_children">
+    
+  </a>
+  <a name="check_for_near_parent_or_children">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_for_near_parent_or_children(obj, all_room_objs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.ensure_object_inside_room">
+    
+  </a>
+  <a name="ensure_object_inside_room">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ensure_object_inside_room(obj, all_room_objs, room_id, room_floor_obj, room_volume_obj, current_center, repeats=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.apply_hierarchie">
+    
+  </a>
+  <a name="apply_hierarchie">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    apply_hierarchie(room_objects):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.adjust_apprtment">
+    
+  </a>
+  <a name="adjust_apprtment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    adjust_apprtment():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.render_topdown_image">
+    
+  </a>
+  <a name="render_topdown_image">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    render_topdown_image(filepath):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.disable_shadows_for_all_lights">
+    
+  </a>
+  <a name="disable_shadows_for_all_lights">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    disable_shadows_for_all_lights():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.calculate_overlap_percentage">
+    
+  </a>
+  <a name="calculate_overlap_percentage">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    calculate_overlap_percentage(obj1, obj2):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Calculate the percentage of overlapping meshes between two Blender objects.</p><p>:param obj1: First Blender object :param obj2: Second Blender object :return: Tuple with percentages of overlap relative to each object (overlap_percentage_obj1, overlap_percentage_obj2)</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.calculate_mesh_volume">
+    
+  </a>
+  <a name="calculate_mesh_volume">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    calculate_mesh_volume(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Calculate the volume of a given mesh object.</p><p>:param obj: Blender mesh object :return: Volume of the mesh</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="adjust.reset_scene">
+    
+  </a>
+  <a name="reset_scene">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reset_scene():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Resets the scene to a clean state.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="adjust.start_i">
+    
+  </a>
+  <a name="start_i">
+    
+  </a>
+  <div class="functionHeader">
+    start_i =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="adjust.parser">
+    
+  </a>
+  <a name="parser">
+    
+  </a>
+  <div class="functionHeader">
+    parser =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="adjust.argv">
+    
+  </a>
+  <a name="argv">
+    
+  </a>
+  <div class="functionHeader">
+    argv =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="adjust.args">
+    
+  </a>
+  <a name="args">
+    
+  </a>
+  <div class="functionHeader">
+    args =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="adjust.filepath">
+    
+  </a>
+  <a name="filepath">
+    
+  </a>
+  <div class="functionHeader">
+    filepath =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="adjust.logfile">
+    
+  </a>
+  <a name="logfile">
+    
+  </a>
+  <div class="functionHeader">
+    logfile =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="adjust.old">
+    
+  </a>
+  <a name="old">
+    
+  </a>
+  <div class="functionHeader">
+    old =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="adjust.fd">
+    
+  </a>
+  <a name="fd">
+    
+  </a>
+  <div class="functionHeader">
+    fd =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="adjust.end_i">
+    
+  </a>
+  <a name="end_i">
+    
+  </a>
+  <div class="functionHeader">
+    end_i =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for AI-Driven 3D Apartment Generator, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2024-09-29 15:31:16.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
