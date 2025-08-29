@@ -1,1 +1,2 @@
 blender/blender filter=lfs diff=lfs merge=lfs -text
+blender/lib/libcycles_kernel_oneapi_aot.so filter=lfs diff=lfs merge=lfs -text
